@@ -1,0 +1,197 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good evening",
+        "Is anyone there?",
+        "Greetings",
+        "What's up?"
+      ],
+      "responses": [
+        "Hello! Welcome to Support Desk. How can I assist you today?",
+        "Hi there! How may I help you with our services?",
+        "Greetings! Feel free to ask any question regarding orders, account, or services."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Have a good day",
+        "Talk to you soon",
+        "I am leaving"
+      ],
+      "responses": [
+        "Goodbye! Have a wonderful day ahead. Feel free to come back if you have any questions.",
+        "Take care! Thank you for chatting with us.",
+        "See you later! We are here 24/7 whenever you need help."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That helps a lot",
+        "Appreciate it",
+        "Awesome thanks",
+        "Much appreciated"
+      ],
+      "responses": [
+        "You're very welcome! Let me know if there's anything else I can do.",
+        "Glad I could help! Do you have any other questions?",
+        "Anytime! Wishing you a great experience."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "order_tracking",
+      "patterns": [
+        "Where is my order?",
+        "Track my package",
+        "How can I track my shipment?",
+        "Check order status",
+        "Order delivery status",
+        "When will my order arrive?"
+      ],
+      "responses": [
+        "You can track your order live under Account -> 'My Orders', or reply with your 6-digit Order ID so I can look it up.",
+        "Standard delivery takes 2-4 business days. Please share your Order ID and I will check the delivery checkpoint for you."
+      ],
+      "context_set": "awaiting_order_id"
+    },
+    {
+      "tag": "order_id_provided",
+      "patterns": [
+        "My order id is",
+        "Order #",
+        "Tracking number",
+        "Here is my order number",
+        "ID 1024",
+        "ORD"
+      ],
+      "responses": [
+        "Thank you! Your package is currently in transit with our logistics carrier and on schedule for on-time delivery.",
+        "Order verified! It has departed our fulfillment warehouse and is out for delivery soon."
+      ],
+      "context_filter": "awaiting_order_id",
+      "context_set": ""
+    },
+    {
+      "tag": "refund_policy",
+      "patterns": [
+        "What is your refund policy?",
+        "How do I request a refund?",
+        "Can I get my money back?",
+        "Return policy",
+        "How many days to return an item?"
+      ],
+      "responses": [
+        "We offer a 30-day hassle-free money-back guarantee. You can start a return in your account dashboard under 'Returns & Refunds'.",
+        "Refunds are processed within 3-5 business days back to your original payment method once the returned item is received."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": [
+        "What payment methods do you accept?",
+        "What payment options do you support?",
+        "Can I pay with PayPal?",
+        "Do you accept credit cards or UPI?",
+        "Accepted payment modes",
+        "Payment choices",
+        "How can I pay?"
+      ],
+      "responses": [
+        "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, Google Pay, and UPI / Net Banking.",
+        "All major credit/debit cards, digital wallets, and secure online payment gateways are supported."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "account_issues",
+      "patterns": [
+        "I cannot log in",
+        "Forgot my password",
+        "Reset password",
+        "Account locked",
+        "How do I change my email?"
+      ],
+      "responses": [
+        "You can reset your password by clicking 'Forgot Password' on the login screen. An instant security link will be emailed to you.",
+        "For security verification, our support team can help unlock your account if you verify your registered email address."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "human_support",
+      "patterns": [
+        "Can I speak to a real person?",
+        "Connect me to human agent",
+        "Customer service representative",
+        "Talk to representative",
+        "Need human help"
+      ],
+      "responses": [
+        "I can connect you with a live customer specialist. Our support agents are active Mon-Fri 8 AM - 8 PM EST. Would you like me to create a priority ticket for you?",
+        "Connecting you to human tier support. An agent usually responds in under 3 minutes during business hours."
+      ],
+      "context_set": "human_handoff"
+    },
+    {
+      "tag": "pricing_and_plans",
+      "patterns": [
+        "What are your prices?",
+        "Subscription cost",
+        "How much does it cost?",
+        "Discount codes",
+        "Do you have a free trial?"
+      ],
+      "responses": [
+        "We offer a 14-day free trial on all plans! Tier pricing starts at $9/mo for Starter, $29/mo for Pro, and custom Enterprise tiers.",
+        "You can view complete pricing breakdown on our pricing page. Use code 'WELCOME10' for 10% off your first 3 months."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "security_privacy",
+      "patterns": [
+        "Is my data secure?",
+        "Privacy policy",
+        "How do you use my personal information?",
+        "GDPR compliance",
+        "Is payment encrypted?"
+      ],
+      "responses": [
+        "Your data is protected with 256-bit TLS encryption, SOC-2 compliance, and we never sell your personal information to third parties.",
+        "We adhere strictly to GDPR and CCPA standards. You can download or delete your stored data at any time from your settings."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "capabilities",
+      "patterns": [
+        "What can you do?",
+        "Help me",
+        "Features",
+        "Who created you?",
+        "What are your capabilities?"
+      ],
+      "responses": [
+        "I am an intelligent AI customer support assistant powered by Natural Language Processing (NLP). I can answer FAQs, track orders, explain refund policies, assist with account recovery, and route inquiries to live agents!",
+        "I can help you navigate orders, payments, account troubleshooting, product documentation, and FAQs with contextual understanding."
+      ],
+      "context_set": ""
+    }
+  ]
+}
