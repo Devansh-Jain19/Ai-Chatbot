@@ -21,6 +21,10 @@ nlp = NLPProcessor()
 def home():
     return render_template('index.html')
 
+@app.route('/api/health')
+def health():
+    return jsonify({'status': 'ok', 'service': 'NexusAI Chatbot'})
+
 @app.route('/api/chat', methods=['POST'])
 def chat():
     data = request.get_json() or {}
