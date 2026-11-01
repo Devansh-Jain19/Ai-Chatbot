@@ -1,5 +1,10 @@
 import os
+import sys
 import uuid
+
+# Ensure root folder is in sys.path
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from src.nlp_engine import NLPProcessor
